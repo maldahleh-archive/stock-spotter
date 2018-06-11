@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47020CDEDDF00890654 /* StockCollectionViewController.m */; };
 		6733A47520CDFDCB00890654 /* StockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47420CDFDCB00890654 /* StockCell.m */; };
+		6733A47B20CE17F100890654 /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47A20CE17F100890654 /* StockData.m */; };
 		67E0BC0A20CDE65200C90F75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0BC0920CDE65200C90F75 /* AppDelegate.m */; };
 		67E0BC1020CDE65200C90F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC0E20CDE65200C90F75 /* Main.storyboard */; };
 		67E0BC1220CDE65300C90F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1120CDE65300C90F75 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		6733A47020CDEDDF00890654 /* StockCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockCollectionViewController.m; sourceTree = "<group>"; };
 		6733A47320CDFDCB00890654 /* StockCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockCell.h; sourceTree = "<group>"; };
 		6733A47420CDFDCB00890654 /* StockCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockCell.m; sourceTree = "<group>"; };
+		6733A47920CE17F100890654 /* StockData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockData.h; sourceTree = "<group>"; };
+		6733A47A20CE17F100890654 /* StockData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockData.m; sourceTree = "<group>"; };
 		67E0BC0520CDE65200C90F75 /* stockspotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockspotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0BC0820CDE65200C90F75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67E0BC0920CDE65200C90F75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +64,15 @@
 			path = StockCell;
 			sourceTree = "<group>";
 		};
+		6733A47620CE172200890654 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6733A47920CE17F100890654 /* StockData.h */,
+				6733A47A20CE17F100890654 /* StockData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		67E0BBFC20CDE65200C90F75 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +92,7 @@
 		67E0BC0720CDE65200C90F75 /* stockspotter */ = {
 			isa = PBXGroup;
 			children = (
+				6733A47620CE172200890654 /* Model */,
 				6733A46E20CDEDAC00890654 /* StockCollectionView */,
 				67E0BC0820CDE65200C90F75 /* AppDelegate.h */,
 				67E0BC0920CDE65200C90F75 /* AppDelegate.m */,
@@ -164,6 +177,7 @@
 			files = (
 				6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */,
 				67E0BC1820CDE65300C90F75 /* main.m in Sources */,
+				6733A47B20CE17F100890654 /* StockData.m in Sources */,
 				6733A47520CDFDCB00890654 /* StockCell.m in Sources */,
 				67E0BC0A20CDE65200C90F75 /* AppDelegate.m in Sources */,
 			);
