@@ -21,6 +21,7 @@
         [urlString appendString:@".png"];
         
         stock.logoUrl = [NSURL URLWithString:urlString];
+        stock.latestPrice = [[dictionary valueForKeyPath:@"latestPrice"] doubleValue];
         stock.avgTotalVolume = [[dictionary valueForKeyPath:@"avgTotalVolume"] doubleValue];
         stock.week52Low = [[dictionary valueForKeyPath:@"week52Low"] doubleValue];
         stock.week52High = [[dictionary valueForKeyPath:@"week52High"] doubleValue];

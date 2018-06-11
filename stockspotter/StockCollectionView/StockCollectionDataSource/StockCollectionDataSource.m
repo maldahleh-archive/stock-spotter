@@ -62,8 +62,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];
     cell.stockSymbol.text = stockAtCell.symbol;
     
-    NSNumber *stockPrice = [NSNumber numberWithDouble:stockAtCell.latestPrice];
-    cell.footerLabel.text = [stockPrice stringValue];
+    cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.latestPrice];
     
     return cell;
 }
