@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="05x-1C-U0k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Seaform"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="IAW-dJ-6hF">
                             <size key="itemSize" width="150" height="60"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,19 +38,37 @@
                                                 <constraint firstAttribute="width" constant="60" id="dHn-mk-faV"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-17-GW9">
-                                            <rect key="frame" x="60" y="0.0" width="90" height="60"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bIq-ic-zjz" userLabel="StockInfo">
+                                            <rect key="frame" x="63" y="0.0" width="87" height="60"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAPL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-vU-nVk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="5eZ-Ta-cbV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                    <color key="textColor" name="DeepAqua"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$136.25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gey-w3-D0J" userLabel="PriceInfo">
+                                                    <rect key="frame" x="0.0" y="30" width="87" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" name="Ocean"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </stackView>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" name="Wave"/>
                                 <constraints>
-                                    <constraint firstItem="s3w-17-GW9" firstAttribute="leading" secondItem="KBg-PD-SUL" secondAttribute="trailing" id="0au-gI-KOB"/>
                                     <constraint firstItem="KBg-PD-SUL" firstAttribute="top" secondItem="TY8-Md-sGp" secondAttribute="top" id="9Eg-V5-2a4"/>
+                                    <constraint firstAttribute="bottom" secondItem="bIq-ic-zjz" secondAttribute="bottom" id="DSN-bR-SgA"/>
+                                    <constraint firstItem="bIq-ic-zjz" firstAttribute="top" secondItem="TY8-Md-sGp" secondAttribute="top" id="H5J-aJ-Qxu"/>
                                     <constraint firstItem="KBg-PD-SUL" firstAttribute="leading" secondItem="TY8-Md-sGp" secondAttribute="leading" id="Kwb-YT-I77"/>
-                                    <constraint firstAttribute="bottom" secondItem="s3w-17-GW9" secondAttribute="bottom" id="TCM-mG-30q"/>
                                     <constraint firstAttribute="bottom" secondItem="KBg-PD-SUL" secondAttribute="bottom" id="cWT-nc-E8z"/>
-                                    <constraint firstAttribute="trailing" secondItem="s3w-17-GW9" secondAttribute="trailing" id="gJf-jg-Bm1"/>
-                                    <constraint firstItem="s3w-17-GW9" firstAttribute="top" secondItem="TY8-Md-sGp" secondAttribute="top" id="sPn-Pb-pb9"/>
+                                    <constraint firstAttribute="trailing" secondItem="bIq-ic-zjz" secondAttribute="trailing" id="iZW-ak-ERl"/>
+                                    <constraint firstItem="bIq-ic-zjz" firstAttribute="leading" secondItem="KBg-PD-SUL" secondAttribute="trailing" constant="3" id="kib-Y8-6bk"/>
                                 </constraints>
                             </collectionViewCell>
                         </cells>
@@ -61,7 +80,21 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCu-HB-cr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797.60000000000002" y="115.59220389805098"/>
+            <point key="canvasLocation" x="927" y="115"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="DeepAqua">
+            <color red="0.0" green="0.23137254901960785" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980392156862" green="0.3411764705882353" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Seaform">
+            <color red="0.7686274509803922" green="0.87450980392156863" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.6470588235294118" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
