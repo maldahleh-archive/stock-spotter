@@ -8,7 +8,6 @@
 
 #import "StockCollectionViewController.h"
 #import "StockCollectionDataSource.h"
-#import "StockData.h"
 
 @interface StockCollectionViewController ()
 @property (nonatomic, strong) StockCollectionDataSource *dataSource;
