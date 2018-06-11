@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StockCell : UICollectionViewCell
+@class StockData;
 
+@interface StockCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *companyLogoView;
+@property (weak, nonatomic) IBOutlet UILabel *stockSymbol;
+@property (weak, nonatomic) IBOutlet UILabel *footerLabel;
+
+@property (strong, nonatomic) StockData *stockData;
 @end

@@ -70,6 +70,11 @@
                                     <constraint firstAttribute="trailing" secondItem="bIq-ic-zjz" secondAttribute="trailing" id="iZW-ak-ERl"/>
                                     <constraint firstItem="bIq-ic-zjz" firstAttribute="leading" secondItem="KBg-PD-SUL" secondAttribute="trailing" constant="3" id="kib-Y8-6bk"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="companyLogoView" destination="KBg-PD-SUL" id="lEN-qB-dQE"/>
+                                    <outlet property="footerLabel" destination="gey-w3-D0J" id="TPa-3m-Cyk"/>
+                                    <outlet property="stockSymbol" destination="Dst-vU-nVk" id="Fvg-Ly-H0U"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

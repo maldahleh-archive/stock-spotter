@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47020CDEDDF00890654 /* StockCollectionViewController.m */; };
 		6733A47520CDFDCB00890654 /* StockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47420CDFDCB00890654 /* StockCell.m */; };
-		6733A47B20CE17F100890654 /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47A20CE17F100890654 /* StockData.m */; };
 		6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47E20CE2D6700890654 /* StockCollectionDataSource.m */; };
 		67E0BC0A20CDE65200C90F75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0BC0920CDE65200C90F75 /* AppDelegate.m */; };
 		67E0BC1020CDE65200C90F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC0E20CDE65200C90F75 /* Main.storyboard */; };
 		67E0BC1220CDE65300C90F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1120CDE65300C90F75 /* Assets.xcassets */; };
 		67E0BC1520CDE65300C90F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1320CDE65300C90F75 /* LaunchScreen.storyboard */; };
 		67E0BC1820CDE65300C90F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0BC1720CDE65300C90F75 /* main.m */; };
+		67FFA6C520CF01EB0045DD4A /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47A20CE17F100890654 /* StockData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,8 +190,8 @@
 			files = (
 				6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */,
 				6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */,
+				67FFA6C520CF01EB0045DD4A /* StockData.m in Sources */,
 				67E0BC1820CDE65300C90F75 /* main.m in Sources */,
-				6733A47B20CE17F100890654 /* StockData.m in Sources */,
 				6733A47520CDFDCB00890654 /* StockCell.m in Sources */,
 				67E0BC0A20CDE65200C90F75 /* AppDelegate.m in Sources */,
 			);

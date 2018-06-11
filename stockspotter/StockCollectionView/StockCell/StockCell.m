@@ -7,6 +7,7 @@
 //
 
 #import "StockCell.h"
+#import "StockData.h"
 
 @implementation StockCell
 
