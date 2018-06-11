@@ -1,6 +1,6 @@
 //
 //  StockCollectionDataSource.m
-//  stockspotter
+//  StockSpotter
 //
 //  Created by Mohammed Al-Dahleh on 2018-06-11.
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
@@ -8,10 +8,8 @@
 
 #import "StockCollectionDataSource.h"
 
-@interface StockCollectionDataSource ()  {
-}
-
-@property (nonatomic, strong) NSArray * myData;
+@interface StockCollectionDataSource ()
+@property (nonatomic, strong) NSMutableArray *stockData;
 @end
 
 @implementation StockCollectionDataSource
@@ -19,28 +17,27 @@
 static NSString * const reuseIdentifier = @"StockCell";
 
 -(id)init {
-    
-    if (self=[super init]) {
-        NSLog(@"%s - initialized", __FUNCTION__);
-        self.myData = [NSArray arrayWithObjects: @"Apple", @"Orange", @"Banana", nil];
-    }
-    
+    [self updateData];
     return self;
 }
 
+- (void)updateData {
+    self.stockData = [NSMutableArray array];
+}
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
+    return self.stockData.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    // Configure cell
     
     return cell;
 }

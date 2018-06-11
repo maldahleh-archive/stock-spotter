@@ -23,7 +23,12 @@
     self.dataSource = [[StockCollectionDataSource alloc] init];
     self.collectionView.dataSource = self.dataSource;
     
-    [self refreshCells];
+    [self refreshData];
+}
+
+- (void)refreshData {
+    [self.dataSource updateData];
+    [self.collectionView reloadData];
 }
 
 - (void)refreshCells {
