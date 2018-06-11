@@ -7,6 +7,7 @@
 //
 
 #import "StockCollectionDataSource.h"
+#import "StockCell.h"
 #import "StockData.h"
 
 @interface StockCollectionDataSource ()
@@ -24,14 +25,17 @@ static NSString * const reuseIdentifier = @"StockCell";
 
 - (void)refreshCells:(UICollectionView*)collectionView {
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"https://api.iextrading.com/1.0/stock/market/list/mostactive"];
+    NSURL *url = [NSURL URLWithString:@"https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl,amzn,msft,fb,brk.b,jpm,xom,jnj,v,bac,wfc,intc,wmt,cvx,unh,hd,ba,pfe,ma,t,csco,vz,orcl,pg,ko,c,mrk,nvda,nflx,dis,cmcsa,mcd,ibm,adbe,nke,ge,hon,txn,unp,bkng,ups,pypl,crm,cat,lmt,cost,gs,axp,low,sbux,twx,khc,fdx,cvs,chtr,gm,rtn,gd,fox,aaba,tsla,mar,ttwo,z,has,dbx,trip,colm,jblu,mat,wen,noc,bk,f,tgt,hpq,race,twtr,spot,luv,tri,cp,sq,k,bby,cbs,hsy,snap,efx,shop,qsr,tru,ihg,cmg,gddy,m,dpz,wu,grub,h&types=quote"];
     
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
-        NSArray *stockArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSDictionary *stockTopDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        for (NSDictionary *dict in stockArray) {
-            StockData *dataObject = [StockData stockWithDictionary:dict];
+        for (NSString *dictKey in stockTopDictionary) {
+            NSDictionary *stockDict = [stockTopDictionary objectForKey:dictKey];
+            NSDictionary *stockQuoteDict = [stockDict objectForKey:@"quote"];
+            
+            StockData *dataObject = [StockData stockWithDictionary:stockQuoteDict];
             [self.stockData addObject:dataObject];
         }
         
@@ -53,10 +57,13 @@ static NSString * const reuseIdentifier = @"StockCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    StockCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];
-    // TODO: Configure cell
+    cell.stockSymbol.text = stockAtCell.symbol;
+    
+    NSNumber *stockPrice = [NSNumber numberWithDouble:stockAtCell.latestPrice];
+    cell.footerLabel.text = [stockPrice stringValue];
     
     return cell;
 }
