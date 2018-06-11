@@ -25,8 +25,7 @@
 }
 
 - (void)refreshData {
-    [self.dataSource updateData];
-    [self.collectionView reloadData];
+    [self.dataSource updateData:self.collectionView];
 }
 
 @end

@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StockCollectionDataSource : NSObject <UICollectionViewDataSource>
-- (void)updateData;
+- (void)updateData:(UICollectionView *)collectionView;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath; 

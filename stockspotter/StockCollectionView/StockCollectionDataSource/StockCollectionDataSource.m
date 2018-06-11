@@ -17,24 +17,27 @@
 
 static NSString * const reuseIdentifier = @"StockCell";
 
-- (void)updateData {
+- (void)updateData:(UICollectionView*)collectionView {
     self.stockData = [NSMutableArray array];
-    [self refreshCells];
+    [self refreshCells:collectionView];
 }
 
-- (void)refreshCells {
+- (void)refreshCells:(UICollectionView*)collectionView {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:@"https://api.iextrading.com/1.0/stock/market/list/mostactive"];
     
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
-        NSArray *stockData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        NSArray *stockArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         
-        for (NSDictionary *dict in stockData) {
-            NSLog(@"HIT");
+        for (NSDictionary *dict in stockArray) {
             StockData *dataObject = [StockData stockWithDictionary:dict];
             [self.stockData addObject:dataObject];
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [collectionView reloadData];
+        });
     }];
     
     [task resume];
