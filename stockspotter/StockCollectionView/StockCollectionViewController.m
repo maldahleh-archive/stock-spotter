@@ -18,6 +18,17 @@ static NSString * const reuseIdentifier = @"StockCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self refreshCells];
+}
+
+- (void)refreshCells {
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:@"https://api.iextrading.com/1.0/stock/market/list/mostactive"];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+    }];
+    
+    [task resume];
 }
 
 /*
