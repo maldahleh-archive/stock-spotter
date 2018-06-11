@@ -7,18 +7,22 @@
 //
 
 #import "StockCollectionViewController.h"
+#import "StockCollectionDataSource.h"
 #import "StockData.h"
 
 @interface StockCollectionViewController ()
 @property (strong, nonatomic) NSMutableArray *stockCollection;
+@property (nonatomic, strong) StockCollectionDataSource *dataSource;
 @end
 
 @implementation StockCollectionViewController
 
-static NSString * const reuseIdentifier = @"StockCell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.dataSource = [[StockCollectionDataSource alloc] init];
+    self.collectionView.dataSource = self.dataSource;
+    
     [self refreshCells];
 }
 
@@ -39,25 +43,6 @@ static NSString * const reuseIdentifier = @"StockCell";
     }];
     
     [task resume];
-}
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 0;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 0;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    
-    return cell;
 }
 
 @end
