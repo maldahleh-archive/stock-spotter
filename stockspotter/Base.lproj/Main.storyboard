@@ -9,28 +9,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Stock Collection View Controller-->
         <scene sceneID="FGn-rE-Tsk">
             <objects>
-                <collectionViewController id="OlO-M9-GvK" sceneMemberID="viewController">
+                <collectionViewController id="OlO-M9-GvK" customClass="StockCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="05x-1C-U0k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IAW-dJ-6hF">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="IAW-dJ-6hF">
+                            <size key="itemSize" width="150" height="60"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="3" minY="3" maxX="3" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StockCell" id="TY8-Md-sGp">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StockCell" id="TY8-Md-sGp" customClass="StockCell">
+                                <rect key="frame" x="3" y="3" width="150" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KBg-PD-SUL" userLabel="CompanyLogoView">
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="dHn-mk-faV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-17-GW9">
+                                            <rect key="frame" x="60" y="0.0" width="90" height="60"/>
+                                        </stackView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="s3w-17-GW9" firstAttribute="leading" secondItem="KBg-PD-SUL" secondAttribute="trailing" id="0au-gI-KOB"/>
+                                    <constraint firstItem="KBg-PD-SUL" firstAttribute="top" secondItem="TY8-Md-sGp" secondAttribute="top" id="9Eg-V5-2a4"/>
+                                    <constraint firstItem="KBg-PD-SUL" firstAttribute="leading" secondItem="TY8-Md-sGp" secondAttribute="leading" id="Kwb-YT-I77"/>
+                                    <constraint firstAttribute="bottom" secondItem="s3w-17-GW9" secondAttribute="bottom" id="TCM-mG-30q"/>
+                                    <constraint firstAttribute="bottom" secondItem="KBg-PD-SUL" secondAttribute="bottom" id="cWT-nc-E8z"/>
+                                    <constraint firstAttribute="trailing" secondItem="s3w-17-GW9" secondAttribute="trailing" id="gJf-jg-Bm1"/>
+                                    <constraint firstItem="s3w-17-GW9" firstAttribute="top" secondItem="TY8-Md-sGp" secondAttribute="top" id="sPn-Pb-pb9"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -41,7 +61,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCu-HB-cr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="116"/>
+            <point key="canvasLocation" x="797.60000000000002" y="115.59220389805098"/>
         </scene>
     </scenes>
 </document>

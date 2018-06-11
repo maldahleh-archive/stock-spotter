@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  StockCell.h
 //  StockSpotter
 //
 //  Created by Mohammed Al-Dahleh on 2018-06-10.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface StockCell : UICollectionViewCell
 
 @end
-
