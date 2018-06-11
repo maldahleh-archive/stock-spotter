@@ -17,4 +17,6 @@
 @property (nonatomic) double week52Low;
 @property (nonatomic) double avgTotalVolume;
 
++ (instancetype) stockWithDictionary:(NSDictionary *) dictionary;
+
 @end
