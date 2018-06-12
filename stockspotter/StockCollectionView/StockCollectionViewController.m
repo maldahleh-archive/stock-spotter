@@ -10,6 +10,7 @@
 #import "StockCollectionDataSource.h"
 
 @interface StockCollectionViewController ()
+@property (nonatomic, strong) UIRefreshControl *uiRefresher;
 @property (nonatomic, strong) StockCollectionDataSource *dataSource;
 @end
 
@@ -21,7 +22,18 @@
     self.dataSource = [[StockCollectionDataSource alloc] init];
     self.collectionView.dataSource = self.dataSource;
     
+    self.uiRefresher = [[UIRefreshControl alloc] init];
+    self.uiRefresher.tintColor = [UIColor colorNamed:@"Seaform"];
+    [self.uiRefresher addTarget:self action:@selector(refreshPulled) forControlEvents:UIControlEventValueChanged];
+    self.collectionView.alwaysBounceVertical = YES;
+    [self.collectionView addSubview:self.uiRefresher];
+    
     [self refreshData];
+}
+
+- (void)refreshPulled {
+    [self refreshData];
+    [self.uiRefresher endRefreshing];
 }
 
 - (void)refreshData {
