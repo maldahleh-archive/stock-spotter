@@ -32,6 +32,8 @@
 }
 
 - (void)refreshPulled {
+    if ([self.uiRefresher isRefreshing]) { return; }
+    
     [self refreshData];
     [self.uiRefresher endRefreshing];
 }

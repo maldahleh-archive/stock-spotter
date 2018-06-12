@@ -10,6 +10,7 @@
 #import "StockData.h"
 
 @implementation StockCell
+
 - (void)setStockData:(StockData *)stockData {
     _stockData = stockData;
     
@@ -32,4 +33,5 @@
     
     [task resume];
 }
+
 @end
