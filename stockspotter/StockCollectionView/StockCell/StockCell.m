@@ -13,6 +13,7 @@
 - (void)setStockData:(StockData *)stockData {
     _stockData = stockData;
     
+    self.companyLogoView.image = nil;
     [self dowloadImageWithURL:stockData.logoUrl];
 }
 
