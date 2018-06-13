@@ -19,7 +19,7 @@
     } else if (displayed == 3) {
         self.typeHeader.text = @"Volume";
     } else if (displayed == 4) {
-        self.typeHeader.text = @"Unknown";
+        self.typeHeader.text = @"Market Cap";
     }
 }
 @end

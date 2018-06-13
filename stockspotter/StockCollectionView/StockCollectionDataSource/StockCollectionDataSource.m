@@ -97,13 +97,13 @@ static NSString * const reuseIdentifier = @"StockCell";
     cell.stockSymbol.text = stockAtCell.symbol;
     
     if (self.displayedProperty == 0) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.week52Low];
+        cell.footerLabel.text = stockAtCell.week52Low;
     } else if (self.displayedProperty == 1) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.week52High];
+        cell.footerLabel.text = stockAtCell.week52High;
     } else if (self.displayedProperty == 2) {
         cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.latestPrice];
     } else if (self.displayedProperty == 3) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%f", stockAtCell.avgTotalVolume];
+        cell.footerLabel.text = stockAtCell.avgTotalVolume;
     } else if (self.displayedProperty == 4) {
         
     }
