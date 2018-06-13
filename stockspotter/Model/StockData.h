@@ -12,8 +12,8 @@
 @property (nonatomic, strong) NSURL *logoUrl;
 @property (nonatomic, strong) NSString *symbol;
 @property (nonatomic) double latestPrice;
-@property (nonatomic, strong) NSString *week52High;
-@property (nonatomic, strong) NSString *week52Low;
+@property (nonatomic) double week52High;
+@property (nonatomic) double week52Low;
 @property (nonatomic, strong) NSString *avgTotalVolume;
 @property (nonatomic, strong) NSString *marketCap;
 
