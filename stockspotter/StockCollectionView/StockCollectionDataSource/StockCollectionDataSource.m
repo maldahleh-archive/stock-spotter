@@ -24,6 +24,20 @@ static NSString * const reuseIdentifier = @"StockCell";
     return self;
 }
 
+- (void)leftGesture:(UICollectionView*)collectionView {
+    double newValue = self.displayedProperty - 1;
+    if (newValue < 0) { newValue = 4; }
+    
+    self.displayedProperty = newValue;
+}
+
+- (void)rightGesture:(UICollectionView*)collectionView {
+    double newValue = self.displayedProperty + 1;
+    if (newValue > 4) { newValue = 0; }
+    
+    self.displayedProperty = newValue;
+}
+
 - (void)updateData:(UICollectionView*)collectionView {
     self.stockData = [NSMutableArray array];
     [self refreshCells:collectionView];

@@ -12,6 +12,8 @@
 @interface StockCollectionDataSource : NSObject <UICollectionViewDataSource>
 @property double displayedProperty;
 
+- (void)leftGesture:(UICollectionView*)collectionView;
+- (void)rightGesture:(UICollectionView*)collectionView;
 - (void)updateData:(UICollectionView *)collectionView;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
