@@ -31,6 +31,16 @@
     [self refreshData];
 }
 
+- (void)setupGestures {
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self.dataSource action:@selector(leftGesture:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:leftSwipe];
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self.dataSource action:@selector(rightGesture:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:rightSwipe];
+}
+
 - (void)refreshPulled {
     [self refreshData];
     [self.uiRefresher endRefreshing];
