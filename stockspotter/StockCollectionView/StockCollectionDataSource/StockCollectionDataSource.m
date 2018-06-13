@@ -29,6 +29,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     if (newValue < 0) { newValue = 4; }
     
     self.displayedProperty = newValue;
+    [collectionView reloadData];
 }
 
 - (void)rightGesture:(UICollectionView*)collectionView {
@@ -36,6 +37,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     if (newValue > 4) { newValue = 0; }
     
     self.displayedProperty = newValue;
+    [collectionView reloadData];
 }
 
 - (void)updateData:(UICollectionView*)collectionView {
