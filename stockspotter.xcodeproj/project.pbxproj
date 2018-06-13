@@ -10,6 +10,7 @@
 		6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47020CDEDDF00890654 /* StockCollectionViewController.m */; };
 		6733A47520CDFDCB00890654 /* StockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47420CDFDCB00890654 /* StockCell.m */; };
 		6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47E20CE2D6700890654 /* StockCollectionDataSource.m */; };
+		6749737020D0B3B0000EAE81 /* StockHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6749736F20D0B3B0000EAE81 /* StockHeader.m */; };
 		67E0BC0A20CDE65200C90F75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0BC0920CDE65200C90F75 /* AppDelegate.m */; };
 		67E0BC1020CDE65200C90F75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC0E20CDE65200C90F75 /* Main.storyboard */; };
 		67E0BC1220CDE65300C90F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1120CDE65300C90F75 /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		6733A47A20CE17F100890654 /* StockData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockData.m; sourceTree = "<group>"; };
 		6733A47D20CE2D6700890654 /* StockCollectionDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockCollectionDataSource.h; sourceTree = "<group>"; };
 		6733A47E20CE2D6700890654 /* StockCollectionDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockCollectionDataSource.m; sourceTree = "<group>"; };
+		6749736E20D0B3B0000EAE81 /* StockHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockHeader.h; sourceTree = "<group>"; };
+		6749736F20D0B3B0000EAE81 /* StockHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockHeader.m; sourceTree = "<group>"; };
 		67E0BC0520CDE65200C90F75 /* stockspotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stockspotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0BC0820CDE65200C90F75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67E0BC0920CDE65200C90F75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		6733A46E20CDEDAC00890654 /* StockCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				6749736D20D0B37C000EAE81 /* StockHeader */,
 				6733A47220CDFDA700890654 /* StockCell */,
 				6733A47C20CE2D4700890654 /* StockCollectionDataSource */,
 				6733A46F20CDEDDF00890654 /* StockCollectionViewController.h */,
@@ -84,6 +88,15 @@
 				6733A47E20CE2D6700890654 /* StockCollectionDataSource.m */,
 			);
 			path = StockCollectionDataSource;
+			sourceTree = "<group>";
+		};
+		6749736D20D0B37C000EAE81 /* StockHeader */ = {
+			isa = PBXGroup;
+			children = (
+				6749736E20D0B3B0000EAE81 /* StockHeader.h */,
+				6749736F20D0B3B0000EAE81 /* StockHeader.m */,
+			);
+			path = StockHeader;
 			sourceTree = "<group>";
 		};
 		67E0BBFC20CDE65200C90F75 = {
@@ -190,6 +203,7 @@
 			files = (
 				6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */,
 				6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */,
+				6749737020D0B3B0000EAE81 /* StockHeader.m in Sources */,
 				67FFA6C520CF01EB0045DD4A /* StockData.m in Sources */,
 				67E0BC1820CDE65300C90F75 /* main.m in Sources */,
 				6733A47520CDFDCB00890654 /* StockCell.m in Sources */,
