@@ -28,17 +28,26 @@
     self.collectionView.alwaysBounceVertical = YES;
     [self.collectionView addSubview:self.uiRefresher];
     
+    [self setupGestures];
     [self refreshData];
 }
 
 - (void)setupGestures {
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self.dataSource action:@selector(leftGesture:)];
+    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwiped)];
     leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:leftSwipe];
+    [self.collectionView addGestureRecognizer:leftSwipe];
     
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self.dataSource action:@selector(rightGesture:)];
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwiped)];
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:rightSwipe];
+    [self.collectionView addGestureRecognizer:rightSwipe];
+}
+
+- (void)leftSwiped {
+    [self.dataSource performSelector:@selector(leftGesture:) withObject:self.collectionView];
+}
+
+- (void)rightSwiped {
+    [self.dataSource performSelector:@selector(rightGesture:) withObject:self.collectionView];
 }
 
 - (void)refreshPulled {
