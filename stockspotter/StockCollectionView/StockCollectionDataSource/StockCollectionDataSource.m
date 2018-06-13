@@ -15,8 +15,14 @@
 @end
 
 @implementation StockCollectionDataSource
-
 static NSString * const reuseIdentifier = @"StockCell";
+
+- (id)init {
+    self = [super init];
+    self.displayedProperty = 2;
+    
+    return self;
+}
 
 - (void)updateData:(UICollectionView*)collectionView {
     self.stockData = [NSMutableArray array];
@@ -65,7 +71,17 @@ static NSString * const reuseIdentifier = @"StockCell";
     StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];
     cell.stockSymbol.text = stockAtCell.symbol;
     
-    cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.latestPrice];
+    if (self.displayedProperty == 0) {
+        
+    } else if (self.displayedProperty == 1) {
+        
+    } else if (self.displayedProperty == 2) {
+        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.latestPrice];
+    } else if (self.displayedProperty == 3) {
+        
+    } else if (self.displayedProperty == 4) {
+        
+    }
     
     return cell;
 }
