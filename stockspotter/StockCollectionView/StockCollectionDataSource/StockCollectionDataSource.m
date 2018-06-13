@@ -7,6 +7,7 @@
 //
 
 #import "StockCollectionDataSource.h"
+#import "StockHeader.h"
 #import "StockCell.h"
 #import "StockData.h"
 
@@ -76,6 +77,14 @@ static NSString * const reuseIdentifier = @"StockCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.stockData.count;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if (kind != UICollectionElementKindSectionHeader) { return nil; }
+    
+    StockHeader *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderLabel" forIndexPath:indexPath];
+    [header updateWith:self.displayedProperty];
+    return header;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

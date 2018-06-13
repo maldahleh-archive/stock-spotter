@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StockHeader : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UILabel *typeHeader;
 
+- (void)updateWith:(double)displayed;
 @end
