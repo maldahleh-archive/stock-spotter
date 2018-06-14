@@ -94,20 +94,7 @@ static NSString * const reuseIdentifier = @"StockCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StockCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.stockData = [self.stockData objectAtIndex:indexPath.row];
-    
-    StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];
-    
-    if (self.displayedProperty == 0) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.week52Low];
-    } else if (self.displayedProperty == 1) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.week52High];
-    } else if (self.displayedProperty == 2) {
-        cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.latestPrice];
-    } else if (self.displayedProperty == 3) {
-        cell.footerLabel.text = stockAtCell.avgTotalVolume;
-    } else if (self.displayedProperty == 4) {
-        cell.footerLabel.text = stockAtCell.marketCap;
-    }
+    [cell updateFooter:self.displayedProperty];
     
     return cell;
 }

@@ -16,4 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *footerLabel;
 
 @property (strong, nonatomic) StockData *stockData;
+
+- (void)updateFooter:(int)displayedProperty;
 @end

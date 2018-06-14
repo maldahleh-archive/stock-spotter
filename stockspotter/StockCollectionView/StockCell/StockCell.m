@@ -20,6 +20,20 @@
     [self dowloadImageWithURL:stockData.logoUrl];
 }
 
+- (void)updateFooter:(int)displayedProperty {
+    if (displayedProperty == 0) {
+        self.footerLabel.text = [NSString stringWithFormat:@"%.2f", self.stockData.week52Low];
+    } else if (displayedProperty == 1) {
+        self.footerLabel.text = [NSString stringWithFormat:@"%.2f", self.stockData.week52High];
+    } else if (displayedProperty == 2) {
+        self.footerLabel.text = [NSString stringWithFormat:@"%.2f", self.stockData.latestPrice];
+    } else if (displayedProperty == 3) {
+        self.footerLabel.text = self.stockData.avgTotalVolume;
+    } else if (displayedProperty == 4) {
+        self.footerLabel.text = self.stockData.marketCap;
+    }
+}
+
 - (void)roundCorners {
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 5;
