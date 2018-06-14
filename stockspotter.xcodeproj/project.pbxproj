@@ -16,6 +16,7 @@
 		67E0BC1220CDE65300C90F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1120CDE65300C90F75 /* Assets.xcassets */; };
 		67E0BC1520CDE65300C90F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0BC1320CDE65300C90F75 /* LaunchScreen.storyboard */; };
 		67E0BC1820CDE65300C90F75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0BC1720CDE65300C90F75 /* main.m */; };
+		67E1AD2220D2EE57005F09BE /* NumberUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1AD2120D2EE57005F09BE /* NumberUtils.m */; };
 		67FFA6C520CF01EB0045DD4A /* StockData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47A20CE17F100890654 /* StockData.m */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,8 @@
 		67E0BC1420CDE65300C90F75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E0BC1620CDE65300C90F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E0BC1720CDE65300C90F75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67E1AD2020D2EE57005F09BE /* NumberUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberUtils.h; sourceTree = "<group>"; };
+		67E1AD2120D2EE57005F09BE /* NumberUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 		6762681420D22B98000A90ED /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				67E1AD2020D2EE57005F09BE /* NumberUtils.h */,
+				67E1AD2120D2EE57005F09BE /* NumberUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			files = (
 				6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */,
 				6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */,
+				67E1AD2220D2EE57005F09BE /* NumberUtils.m in Sources */,
 				6749737020D0B3B0000EAE81 /* StockHeader.m in Sources */,
 				67FFA6C520CF01EB0045DD4A /* StockData.m in Sources */,
 				67E0BC1820CDE65300C90F75 /* main.m in Sources */,
