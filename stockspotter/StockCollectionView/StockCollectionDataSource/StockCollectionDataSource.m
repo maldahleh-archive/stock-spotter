@@ -6,6 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
+#import "AlertUtils.h"
 #import "CollectionViewUtils.h"
 #import "StockCollectionDataSource.h"
 #import "StockHeader.h"
@@ -17,7 +18,7 @@
 @end
 
 @implementation StockCollectionDataSource
-static NSString * const reuseIdentifier = @"StockCell";
+static NSString* const reuseIdentifier = @"StockCell";
 
 - (id)init {
     self = [super init];
@@ -54,6 +55,11 @@ static NSString * const reuseIdentifier = @"StockCell";
     NSURL *url = [NSURL URLWithString:@"https://api.iextrading.com/1.0/stock/market/batch?symbols=aapl,fun,msft,fb,brk.b,jpm,xom,jnj,v,bac,wfc,intc,wmt,cvx,unh,hd,ba,pfe,ma,t,csco,vz,orcl,pg,ko,c,mrk,nvda,nflx,dis,mcd,ibm,adbe,nke,ge,hon,txn,unp,six,ups,pypl,crm,cat,lmt,cost,gs,axp,low,sbux,twx,khc,fdx,cvs,chtr,gm,rtn,gd,fox,aaba,tsla,mar,ttwo,z,has,dbx,trip,colm,jblu,mat,wen,noc,bk,f,tgt,hpq,race,twtr,spot,luv,tri,cp,sq,k,bby,cbs,hsy,snap,mtn,shop,qsr,tru,ihg,cmg,gddy,m,dpz,wu,grub,h&types=quote"];
     
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            [AlertUtils alertControllerWithTitle:@"StockSpotter" andBody:[NSString stringWithFormat:@"Error: %@", error.localizedDescription]];
+            return;
+        }
+        
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
         NSDictionary *stockTopDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
         

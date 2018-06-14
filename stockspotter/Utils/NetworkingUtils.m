@@ -6,6 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
+#import "AlertUtils.h"
 #import "NetworkingUtils.h"
 
 @implementation NetworkingUtils
@@ -15,6 +16,11 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
     
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error != nil) {
+            [AlertUtils alertControllerWithTitle:@"StockSpotter" andBody:[NSString stringWithFormat:@"Error: %@", error.description]];
+            return;
+        }
+        
         NSData *data = [NSData dataWithContentsOfURL:location];
         UIImage *image = [UIImage imageWithData:data];
         
