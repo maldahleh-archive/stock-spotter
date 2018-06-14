@@ -105,7 +105,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     } else if (self.displayedProperty == 3) {
         cell.footerLabel.text = stockAtCell.avgTotalVolume;
     } else if (self.displayedProperty == 4) {
-        
+        cell.footerLabel.text = stockAtCell.marketCap;
     }
     
     return cell;

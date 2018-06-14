@@ -43,7 +43,7 @@
         return [NSString stringWithFormat:@"%@%lld", sign, num];
     
     int exp = (int) (log10l(num) / 3.f);
-    NSArray *units = @[@"K",@"M",@"G",@"T",@"P",@"E"];
+    NSArray *units = @[@"K",@"M",@"B",@"T",@"P",@"E"];
     
     return [NSString stringWithFormat:@"%@%.1f%@", sign, (num / pow(1000, exp)), [units objectAtIndex:(exp-1)]];
 }
