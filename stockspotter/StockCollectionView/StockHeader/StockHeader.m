@@ -11,15 +11,15 @@
 @implementation StockHeader
 - (void)updateWith:(double)displayed {
     if (displayed == 0) {
-        self.typeHeader.text = @"52 Week Low";
+        self.typeHeader.text = @"52 Week Low (in US$)";
     } else if (displayed == 1) {
-        self.typeHeader.text = @"52 Week High";
+        self.typeHeader.text = @"52 Week High (in US$)";
     } else if (displayed == 2) {
-        self.typeHeader.text = @"Latest Price";
+        self.typeHeader.text = @"Latest Price (in US$)";
     } else if (displayed == 3) {
         self.typeHeader.text = @"Volume";
     } else if (displayed == 4) {
-        self.typeHeader.text = @"Market Cap";
+        self.typeHeader.text = @"Market Cap (in US$)";
     }
 }
 @end

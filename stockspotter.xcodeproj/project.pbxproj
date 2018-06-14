@@ -99,6 +99,13 @@
 			path = StockHeader;
 			sourceTree = "<group>";
 		};
+		6762681420D22B98000A90ED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		67E0BBFC20CDE65200C90F75 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +127,7 @@
 			children = (
 				6733A47620CE172200890654 /* Model */,
 				6733A46E20CDEDAC00890654 /* StockCollectionView */,
+				6762681420D22B98000A90ED /* Utils */,
 				67E0BC0820CDE65200C90F75 /* AppDelegate.h */,
 				67E0BC0920CDE65200C90F75 /* AppDelegate.m */,
 				67E0BC0E20CDE65200C90F75 /* Main.storyboard */,
