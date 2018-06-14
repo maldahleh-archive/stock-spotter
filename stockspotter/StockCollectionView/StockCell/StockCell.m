@@ -8,6 +8,7 @@
 
 #import "StockCell.h"
 #import "StockData.h"
+#import "NetworkingUtils.h"
 
 @implementation StockCell
 
@@ -17,7 +18,7 @@
     
     self.stockSymbol.text = self.stockData.symbol;
     self.companyLogoView.image = nil;
-    [self dowloadImageWithURL:stockData.logoUrl];
+    [NetworkingUtils dowloadImageWith:self.stockData.logoUrl forLogoView:self.companyLogoView];
 }
 
 #pragma mark - Cell footer display updater
@@ -39,23 +40,6 @@
 - (void)roundCorners {
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 5;
-}
-
-#pragma mark - Networking to download image
-- (void)dowloadImageWithURL:(NSURL *)url {
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];
-    
-    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSData *data = [NSData dataWithContentsOfURL:location];
-        UIImage *image = [UIImage imageWithData:data];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.companyLogoView.image = image;
-        });
-    }];
-    
-    [task resume];
 }
 
 @end

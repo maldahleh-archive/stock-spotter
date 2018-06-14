@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670C239020D30932006436AF /* NetworkingUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 670C238F20D30932006436AF /* NetworkingUtils.m */; };
 		6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47020CDEDDF00890654 /* StockCollectionViewController.m */; };
 		6733A47520CDFDCB00890654 /* StockCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47420CDFDCB00890654 /* StockCell.m */; };
 		6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733A47E20CE2D6700890654 /* StockCollectionDataSource.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		670C238E20D30932006436AF /* NetworkingUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkingUtils.h; sourceTree = "<group>"; };
+		670C238F20D30932006436AF /* NetworkingUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkingUtils.m; sourceTree = "<group>"; };
 		6733A46F20CDEDDF00890654 /* StockCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockCollectionViewController.h; sourceTree = "<group>"; };
 		6733A47020CDEDDF00890654 /* StockCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StockCollectionViewController.m; sourceTree = "<group>"; };
 		6733A47320CDFDCB00890654 /* StockCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockCell.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 			children = (
 				67E1AD2320D2EFA9005F09BE /* CollectionViewUtils.h */,
 				67E1AD2420D2EFA9005F09BE /* CollectionViewUtils.m */,
+				670C238E20D30932006436AF /* NetworkingUtils.h */,
+				670C238F20D30932006436AF /* NetworkingUtils.m */,
 				67E1AD2020D2EE57005F09BE /* NumberUtils.h */,
 				67E1AD2120D2EE57005F09BE /* NumberUtils.m */,
 			);
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6733A47120CDEDDF00890654 /* StockCollectionViewController.m in Sources */,
+				670C239020D30932006436AF /* NetworkingUtils.m in Sources */,
 				6733A47F20CE2D6700890654 /* StockCollectionDataSource.m in Sources */,
 				67E1AD2220D2EE57005F09BE /* NumberUtils.m in Sources */,
 				6749737020D0B3B0000EAE81 /* StockHeader.m in Sources */,
