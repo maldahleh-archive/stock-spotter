@@ -93,8 +93,6 @@ static NSString * const reuseIdentifier = @"StockCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     StockCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.layer.masksToBounds = YES;
-    cell.layer.cornerRadius = 5;
     cell.stockData = [self.stockData objectAtIndex:indexPath.row];
     
     StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];

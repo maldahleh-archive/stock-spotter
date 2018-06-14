@@ -13,9 +13,15 @@
 
 - (void)setStockData:(StockData *)stockData {
     _stockData = stockData;
+    [self roundCorners];
     
     self.companyLogoView.image = nil;
     [self dowloadImageWithURL:stockData.logoUrl];
+}
+
+- (void)roundCorners {
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = 5;
 }
 
 - (void)dowloadImageWithURL:(NSURL *)url {
