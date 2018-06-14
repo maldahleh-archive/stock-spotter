@@ -6,6 +6,7 @@
 //  Copyright © 2018 Mohammed Al-Dahleh. All rights reserved.
 //
 
+#import "CollectionViewUtils.h"
 #import "StockCollectionDataSource.h"
 #import "StockHeader.h"
 #import "StockCell.h"
@@ -31,9 +32,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     if (newValue < 0) { newValue = 4; }
     
     self.displayedProperty = newValue;
-    [collectionView performBatchUpdates:^{
-        [collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-    } completion:nil];
+    [CollectionViewUtils reloadCollectionView:collectionView];
 }
 
 - (void)rightGesture:(UICollectionView*)collectionView {
@@ -41,9 +40,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     if (newValue > 4) { newValue = 0; }
     
     self.displayedProperty = newValue;
-    [collectionView performBatchUpdates:^{
-        [collectionView reloadSections:[NSIndexSet indexSetWithIndex:0]];
-    } completion:nil];
+    [CollectionViewUtils reloadCollectionView:collectionView];
 }
 
 #pragma mark - Methods to update and download data
@@ -69,7 +66,7 @@ static NSString * const reuseIdentifier = @"StockCell";
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [collectionView reloadData];
+            [CollectionViewUtils reloadCollectionView:collectionView];
         });
     }];
     
