@@ -96,7 +96,6 @@ static NSString * const reuseIdentifier = @"StockCell";
     cell.stockData = [self.stockData objectAtIndex:indexPath.row];
     
     StockData *stockAtCell = [self.stockData objectAtIndex:indexPath.row];
-    cell.stockSymbol.text = stockAtCell.symbol;
     
     if (self.displayedProperty == 0) {
         cell.footerLabel.text = [NSString stringWithFormat:@"%.2f", stockAtCell.week52Low];

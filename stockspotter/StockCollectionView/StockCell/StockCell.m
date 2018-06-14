@@ -15,6 +15,7 @@
     _stockData = stockData;
     [self roundCorners];
     
+    self.stockSymbol.text = self.stockData.symbol;
     self.companyLogoView.image = nil;
     [self dowloadImageWithURL:stockData.logoUrl];
 }
