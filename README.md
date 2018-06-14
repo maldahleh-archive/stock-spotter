@@ -4,7 +4,7 @@ StockSpotter is an iOS application that displays simple information on some of t
 This application was written in Objective-C as project #8 of the Treehouse iOS Techdegree.
 
 ## Screenshots
-To be added
+<p align="center"><img src="https://i.imgur.com/l2Vm2m3.png" width="200"> <img src="https://i.imgur.com/ZYy1NpU.png" width="200"> <img src="https://i.imgur.com/wlRF2MD.png" width="200"></p>
 
 ## Project Instructions
 For this project you will create an app, written entirely in Objective-C, that makes use of UICollectionViews, Asynchronous Networking, Gestures and Transitions.
