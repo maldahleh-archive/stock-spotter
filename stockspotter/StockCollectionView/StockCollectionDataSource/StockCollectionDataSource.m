@@ -25,6 +25,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     return self;
 }
 
+#pragma mark - Methods to handle the left and right swipe gestures
 - (void)leftGesture:(UICollectionView*)collectionView {
     double newValue = self.displayedProperty - 1;
     if (newValue < 0) { newValue = 4; }
@@ -45,6 +46,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     } completion:nil];
 }
 
+#pragma mark - Methods to update and download data
 - (void)updateData:(UICollectionView*)collectionView {
     self.stockData = [NSMutableArray array];
     [self refreshCells:collectionView];
@@ -74,6 +76,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     [task resume];
 }
 
+#pragma mark - Data Source Sections and Items methods
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -83,6 +86,7 @@ static NSString * const reuseIdentifier = @"StockCell";
     return self.stockData.count;
 }
 
+#pragma mark - Data Source Header and Cell methods
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     if (kind != UICollectionElementKindSectionHeader) { return nil; }
     
