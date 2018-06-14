@@ -31,6 +31,7 @@
     return stock;
 }
 
+#pragma mark - Number formatter
 + (NSString*) suffixNumber:(NSNumber*)number {
     long long num = [number longLongValue];
     

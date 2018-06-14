@@ -20,6 +20,7 @@
     [self dowloadImageWithURL:stockData.logoUrl];
 }
 
+#pragma mark - Cell footer display updater
 - (void)updateFooter:(int)displayedProperty {
     if (displayedProperty == 0) {
         self.footerLabel.text = [NSString stringWithFormat:@"%.2f", self.stockData.week52Low];
@@ -34,11 +35,13 @@
     }
 }
 
+#pragma mark - Cell Rounding
 - (void)roundCorners {
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = 5;
 }
 
+#pragma mark - Networking to download image
 - (void)dowloadImageWithURL:(NSURL *)url {
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60];

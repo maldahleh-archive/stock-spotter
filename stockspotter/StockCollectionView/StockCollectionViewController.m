@@ -19,19 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Set up data source
     self.dataSource = [[StockCollectionDataSource alloc] init];
     self.collectionView.dataSource = self.dataSource;
     
+    // Set up UI refresher
     self.uiRefresher = [[UIRefreshControl alloc] init];
     self.uiRefresher.tintColor = [UIColor colorNamed:@"Seaform"];
     [self.uiRefresher addTarget:self action:@selector(refreshPulled) forControlEvents:UIControlEventValueChanged];
     self.collectionView.alwaysBounceVertical = YES;
     [self.collectionView addSubview:self.uiRefresher];
     
+    // Set up gestures and refresh the data
     [self setupGestures];
     [self refreshData];
 }
 
+#pragma mark - Methods to setup and call gesture methods
 - (void)setupGestures {
     UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwiped)];
     leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -50,6 +54,7 @@
     [self.dataSource performSelector:@selector(rightGesture:) withObject:self.collectionView];
 }
 
+#pragma mark - Methods to handle refreshing of data
 - (void)refreshPulled {
     [self refreshData];
     [self.uiRefresher endRefreshing];
