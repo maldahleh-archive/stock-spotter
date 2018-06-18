@@ -103,7 +103,7 @@
                         </connections>
                     </collectionView>
                     <connections>
-                        <segue destination="yg9-Uu-Sko" kind="presentation" identifier="toDetail" id="3Tc-VG-P9O"/>
+                        <segue destination="yg9-Uu-Sko" kind="presentation" identifier="toDetail" modalPresentationStyle="overCurrentContext" id="3Tc-VG-P9O"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCu-HB-cr4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,7 +149,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGy-77-efB" userLabel="AboutInfo">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGy-77-efB" userLabel="AboutInfo">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="333"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
