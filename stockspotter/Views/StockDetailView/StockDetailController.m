@@ -7,6 +7,7 @@
 //
 
 #import "StockDetailController.h"
+#import "NetworkingUtils.h"
 
 @interface StockDetailController ()
 @property (weak, nonatomic) IBOutlet UIImageView *logoView;
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [NetworkingUtils dowloadImageWith:self.selectedStock.logoUrl forLogoView:self.logoView];
     [self.companyName setText:self.selectedStock.companyName];
     [self.companyDescription setText:self.selectedStock.compDescription];
     [self.companyCEO setText:self.selectedStock.ceo];
