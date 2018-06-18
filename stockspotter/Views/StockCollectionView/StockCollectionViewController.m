@@ -8,6 +8,8 @@
 
 #import "StockCollectionViewController.h"
 #import "StockCollectionDataSource.h"
+#import "StockData.h"
+#import "StockDetailController.h"
 
 @interface StockCollectionViewController ()
 @property (nonatomic, strong) UIRefreshControl *uiRefresher;
@@ -22,6 +24,7 @@
     // Set up data source
     self.dataSource = [[StockCollectionDataSource alloc] init];
     self.collectionView.dataSource = self.dataSource;
+    self.collectionView.delegate = self;
     
     // Set up UI refresher
     self.uiRefresher = [[UIRefreshControl alloc] init];
@@ -33,6 +36,18 @@
     // Set up gestures and refresh the data
     [self setupGestures];
     [self refreshData];
+}
+
+#pragma mark - Cell selection
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    StockData *stock = [self.dataSource stockAt:indexPath.row];
+    [self performSegueWithIdentifier:@"toDetail" sender:stock];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if (![segue.identifier  isEqual: @"toDetail"]) { return; }
+    if (![segue.destinationViewController isKindOfClass:StockDetailController.class]) { return; }
+    if (![sender isKindOfClass:StockData.class]) { return; }
 }
 
 #pragma mark - Methods to setup and call gesture methods

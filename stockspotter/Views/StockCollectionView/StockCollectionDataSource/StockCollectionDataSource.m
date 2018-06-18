@@ -11,7 +11,6 @@
 #import "StockCollectionDataSource.h"
 #import "StockHeader.h"
 #import "StockCell.h"
-#import "StockData.h"
 
 @interface StockCollectionDataSource ()
 @property (nonatomic, strong) NSMutableArray *stockData;
@@ -105,6 +104,11 @@ static NSString* const reuseIdentifier = @"StockCell";
     [cell updateFooter:self.displayedProperty];
     
     return cell;
+}
+
+#pragma mark - Utility methods
+- (StockData*)stockAt:(NSInteger)location {
+    return self.stockData[location];
 }
 
 @end

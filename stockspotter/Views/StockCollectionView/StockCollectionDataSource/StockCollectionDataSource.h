@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "StockData.h"
 
 @interface StockCollectionDataSource : NSObject <UICollectionViewDataSource>
 @property double displayedProperty;
@@ -18,4 +19,5 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView;
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath; 
+- (StockData*)stockAt:(NSInteger)location;
 @end
