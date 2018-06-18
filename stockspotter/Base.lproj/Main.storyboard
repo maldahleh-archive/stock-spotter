@@ -125,7 +125,7 @@
                                     <constraint firstAttribute="width" constant="125" id="xVK-Mm-w9N"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-qm-sge" userLabel="CompanyName">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-qm-sge" userLabel="CompanyName">
                                 <rect key="frame" x="149" y="36" width="210" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="3Kf-ql-cnq"/>
@@ -169,7 +169,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEO" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vv-Pm-7OR" userLabel="CEOName">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vv-Pm-7OR" userLabel="CEOName">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
@@ -192,7 +192,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16k-aa-2FK" userLabel="ExchangeName">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16k-aa-2FK" userLabel="ExchangeName">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
@@ -215,7 +215,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-jk-JRM" userLabel="IndustryName">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-jk-JRM" userLabel="IndustryName">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
@@ -238,7 +238,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-ix-HDj" userLabel="SectorName">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-ix-HDj" userLabel="SectorName">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
@@ -261,7 +261,7 @@
                                                 <color key="textColor" name="Ocean"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xia-6a-5Hx" userLabel="WebsiteURL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xia-6a-5Hx" userLabel="WebsiteURL">
                                                 <rect key="frame" x="100" y="0.0" width="243" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <color key="textColor" name="Wave"/>
@@ -294,7 +294,7 @@
                         <outlet property="companyCEO" destination="4Vv-Pm-7OR" id="icd-aq-439"/>
                         <outlet property="companyDescription" destination="pGy-77-efB" id="QUM-5r-2uo"/>
                         <outlet property="companyExchange" destination="16k-aa-2FK" id="b9m-Zj-bsQ"/>
-                        <outlet property="companyIndustry" destination="8H6-ix-HDj" id="RRK-L3-hdA"/>
+                        <outlet property="companyIndustry" destination="wUY-jk-JRM" id="rZh-zT-vmw"/>
                         <outlet property="companyName" destination="PMz-qm-sge" id="DLN-id-aYh"/>
                         <outlet property="companySector" destination="8H6-ix-HDj" id="I5B-dD-2Rx"/>
                         <outlet property="companyURL" destination="xia-6a-5Hx" id="DHT-Ku-SmR"/>
