@@ -17,5 +17,13 @@
 @property (nonatomic, strong) NSString *avgTotalVolume;
 @property (nonatomic, strong) NSString *marketCap;
 
+@property (nonatomic, strong) NSString *companyName;
+@property (nonatomic, strong) NSString *exchange;
+@property (nonatomic, strong) NSString *industry;
+@property (nonatomic, strong) NSURL *website;
+@property (nonatomic, strong) NSString *compDescription;
+@property (nonatomic, strong) NSString *ceo;
+@property (nonatomic, strong) NSString *sector;
+
 + (instancetype) stockWithQuoteDictionary:(NSDictionary*)quoteDict andCompanyDictionary:(NSDictionary*)companyDict;
 @end
