@@ -17,5 +17,5 @@
 @property (nonatomic, strong) NSString *avgTotalVolume;
 @property (nonatomic, strong) NSString *marketCap;
 
-+ (instancetype) stockWithDictionary:(NSDictionary *) dictionary;
++ (instancetype) stockWithQuoteDictionary:(NSDictionary*)quoteDict andCompanyDictionary:(NSDictionary*)companyDict;
 @end
