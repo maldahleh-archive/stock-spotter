@@ -48,6 +48,11 @@
     if (![segue.identifier  isEqual: @"toDetail"]) { return; }
     if (![segue.destinationViewController isKindOfClass:StockDetailController.class]) { return; }
     if (![sender isKindOfClass:StockData.class]) { return; }
+    
+    StockData *selected = (StockData*) sender;
+    StockDetailController *destination = (StockDetailController*) segue.destinationViewController;
+    
+    destination.selectedStock = selected;
 }
 
 #pragma mark - Methods to setup and call gesture methods
