@@ -31,7 +31,7 @@
         stock.companyName = [companyDict valueForKeyPath:@"companyName"];
         stock.exchange = [companyDict valueForKeyPath:@"exchange"];
         stock.industry = [companyDict valueForKeyPath:@"industry"];
-        stock.website = [NSURL URLWithString:[companyDict valueForKeyPath:@"website"]];
+        stock.website = [companyDict valueForKeyPath:@"website"];
         stock.compDescription = [companyDict valueForKeyPath:@"description"];
         stock.ceo = [companyDict valueForKeyPath:@"CEO"];
         stock.sector = [companyDict valueForKeyPath:@"sector"];
