@@ -66,8 +66,9 @@ static NSString* const reuseIdentifier = @"StockCell";
         for (NSString *dictKey in stockTopDictionary) {
             NSDictionary *stockDict = [stockTopDictionary objectForKey:dictKey];
             NSDictionary *stockQuoteDict = [stockDict objectForKey:@"quote"];
+            NSDictionary *stockCompanyDict = [stockDict objectForKey:@"company"];
             
-            StockData *dataObject = [StockData stockWithDictionary:stockQuoteDict];
+            StockData *dataObject = [StockData stockWithQuoteDictionary:stockQuoteDict andCompanyDictionary:stockCompanyDict];
             [self.stockData addObject:dataObject];
         }
         
