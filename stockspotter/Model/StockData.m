@@ -28,6 +28,13 @@
         stock.week52Low = [[quoteDict valueForKeyPath:@"week52Low"] doubleValue];
         stock.week52High = [[quoteDict valueForKeyPath:@"week52High"] doubleValue];
         
+        stock.companyName = [companyDict valueForKeyPath:@"companyName"];
+        stock.exchange = [companyDict valueForKeyPath:@"exchange"];
+        stock.industry = [companyDict valueForKeyPath:@"industry"];
+        stock.website = [NSURL URLWithString:[companyDict valueForKeyPath:@"website"]];
+        stock.compDescription = [companyDict valueForKeyPath:@"description"];
+        stock.ceo = [companyDict valueForKeyPath:@"CEO"];
+        stock.sector = [companyDict valueForKeyPath:@"sector"];
     }
     
     return stock;
