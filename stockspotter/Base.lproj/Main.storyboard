@@ -122,32 +122,213 @@
                                     <constraint firstAttribute="width" constant="125" id="xVK-Mm-w9N"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-qm-sge" userLabel="CompanyName">
+                                <rect key="frame" x="149" y="36" width="210" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="3Kf-ql-cnq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" name="DeepAqua"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-me-5gb" userLabel="CompanyInfo">
+                                <rect key="frame" x="16" y="169" width="343" height="478"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QEH-x6-jHG" userLabel="About">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="79.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-7b-z9U">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="79.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="dXQ-tp-ykS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGy-77-efB" userLabel="AboutInfo">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="79.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-2O-aSo" userLabel="CEO">
+                                        <rect key="frame" x="0.0" y="79.5" width="343" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-00-sD7">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="5k0-tU-DGa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CEO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vv-Pm-7OR" userLabel="CEOName">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHd-fd-K9r" userLabel="Exchange">
+                                        <rect key="frame" x="0.0" y="159.5" width="343" height="79.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVO-nT-mwx">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="79.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="5YD-fn-NEL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16k-aa-2FK" userLabel="ExchangeName">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="79.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8as-wG-xEC" userLabel="Industry">
+                                        <rect key="frame" x="0.0" y="239" width="343" height="79.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzp-Pg-hp0">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="79.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="L6Y-nL-KOL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Industry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUY-jk-JRM" userLabel="IndustryName">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="79.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvZ-Uk-ni9" userLabel="Sector">
+                                        <rect key="frame" x="0.0" y="318.5" width="343" height="80"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY2-yz-P9Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="oIr-ja-f5a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H6-ix-HDj" userLabel="SectorName">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="80"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXr-GT-DiF" userLabel="Website">
+                                        <rect key="frame" x="0.0" y="398.5" width="343" height="79.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNo-hG-trG">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="79.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="yea-fY-8D2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                <color key="textColor" name="Ocean"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xia-6a-5Hx" userLabel="WebsiteURL">
+                                                <rect key="frame" x="100" y="0.0" width="243" height="79.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="Wave"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="ube-2i-6sY"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="Seaform"/>
                         <constraints>
+                            <constraint firstItem="wzt-me-5gb" firstAttribute="leading" secondItem="cuC-Is-b2P" secondAttribute="leading" constant="16" id="4Mi-hL-D3M"/>
+                            <constraint firstItem="wzt-me-5gb" firstAttribute="top" secondItem="6qQ-sV-lZu" secondAttribute="bottom" constant="8" id="CMb-ao-hrz"/>
+                            <constraint firstItem="cuC-Is-b2P" firstAttribute="trailing" secondItem="wzt-me-5gb" secondAttribute="trailing" constant="16" id="Kb0-rc-07L"/>
                             <constraint firstItem="6qQ-sV-lZu" firstAttribute="top" secondItem="cuC-Is-b2P" secondAttribute="top" constant="16" id="NsG-5T-UfT"/>
                             <constraint firstItem="6qQ-sV-lZu" firstAttribute="leading" secondItem="cuC-Is-b2P" secondAttribute="leading" constant="16" id="Ywu-Y9-egI"/>
+                            <constraint firstItem="PMz-qm-sge" firstAttribute="leading" secondItem="6qQ-sV-lZu" secondAttribute="trailing" constant="8" id="cye-vh-pSs"/>
+                            <constraint firstItem="PMz-qm-sge" firstAttribute="top" secondItem="cuC-Is-b2P" secondAttribute="top" constant="16" id="del-aa-OTb"/>
+                            <constraint firstItem="cuC-Is-b2P" firstAttribute="bottom" secondItem="wzt-me-5gb" secondAttribute="bottom" constant="20" id="ih9-OU-izW"/>
+                            <constraint firstItem="cuC-Is-b2P" firstAttribute="trailing" secondItem="PMz-qm-sge" secondAttribute="trailing" constant="16" id="lDU-tW-nUH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cuC-Is-b2P"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42v-F2-BHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="807.34632683658174"/>
+            <point key="canvasLocation" x="926.5" y="864.5"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="DeepAqua">
             <color red="0.0" green="0.23137254901960785" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="DeepAqua">
+            <color red="0.0" green="0.23137254901960785" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980390000001" green="0.3411764706" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Ocean">
             <color red="0.027450980392156862" green="0.3411764705882353" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980390000001" green="0.3411764706" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980390000001" green="0.3411764706" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980390000001" green="0.3411764706" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980392156862" green="0.3411764705882353" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ocean">
+            <color red="0.027450980390000001" green="0.3411764706" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Seaform">
             <color red="0.7686274509803922" green="0.87450980392156863" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.64705882349999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.64705882349999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
             <color red="0.40000000000000002" green="0.6470588235294118" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.6470588235294118" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.64705882349999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.64705882349999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Wave">
+            <color red="0.40000000000000002" green="0.64705882349999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
