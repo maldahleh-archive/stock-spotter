@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StockData.h"
 
 @interface StockDetailController : UIViewController
-@property (nonatomic, strong) StockData* selectedStock;
+@property (nonatomic, strong) StockData *selectedStock;
 @end
