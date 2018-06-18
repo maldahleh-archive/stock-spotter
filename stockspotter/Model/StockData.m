@@ -31,7 +31,16 @@
         stock.companyName = [companyDict valueForKeyPath:@"companyName"];
         stock.exchange = [companyDict valueForKeyPath:@"exchange"];
         stock.industry = [companyDict valueForKeyPath:@"industry"];
+        
         stock.website = [companyDict valueForKeyPath:@"website"];
+        NSMutableString *url = [NSMutableString stringWithString:stock.website];
+        if ([url hasPrefix:@"https"]) {
+            [url replaceCharactersInRange:NSMakeRange(0, 12) withString:@""];
+        } else {
+            [url replaceCharactersInRange:NSMakeRange(0, 11) withString:@""];
+        }
+        stock.website = url;
+        
         stock.compDescription = [companyDict valueForKeyPath:@"description"];
         stock.ceo = [companyDict valueForKeyPath:@"CEO"];
         stock.sector = [companyDict valueForKeyPath:@"sector"];
